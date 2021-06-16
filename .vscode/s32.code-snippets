@@ -1,0 +1,6 @@
+{
+	"snippet": {
+		"prefix": "s32",
+		"body": "set<int>"
+	}
+}

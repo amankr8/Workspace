@@ -1,0 +1,6 @@
+{
+	"snippet": {
+		"prefix": "v32",
+		"body": "vector<int>"
+	}
+}

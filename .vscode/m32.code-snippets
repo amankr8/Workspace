@@ -1,0 +1,6 @@
+{
+	"snippet": {
+		"prefix": "m32",
+		"body": "map<int, int>"
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"snippet": {
+		"prefix": "vp32",
+		"body": "vector<pair<int, int>>"
+	}
+}
