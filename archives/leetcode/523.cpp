@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-public:
+    public:
     bool checkSubarraySum(vector<int> &nums, int k) {
         int sum = 0;
         unordered_map<int, int> m{{0, -1}};

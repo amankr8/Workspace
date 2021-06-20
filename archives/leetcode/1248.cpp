@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-public:
+    public:
     int numberOfSubarrays(vector<int> &nums, int k) {
         int count = 0;
         unordered_map<int, int> m{{0, 1}};
