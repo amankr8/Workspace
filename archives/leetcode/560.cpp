@@ -3,14 +3,14 @@ using namespace std;
 
 class Solution {
     public:
-    int subarraySum(vector<int> &nums, int k) {
-        int sum = 0, count = 0;
-        unordered_map<int, int> m{{0, 1}};
-        for(int i=0; i<nums.size(); i++) {
-            sum += nums[i];
-            if(m.count(sum-k)) count += m[sum-k];
-            m.count(sum) ? m[sum]++ : m[sum] = 1;
+        int subarraySum(vector<int> &nums, int k) {
+            int sum = 0, count = 0;
+            unordered_map<int, int> m{{0, 1}};
+            for(int i=0; i<nums.size(); i++) {
+                sum += nums[i];
+                if(m.count(sum-k)) count += m[sum-k];
+                m.count(sum) ? m[sum]++ : m[sum] = 1;
+            }
+            return count;
         }
-        return count;
-    }
 };

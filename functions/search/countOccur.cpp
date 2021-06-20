@@ -12,17 +12,22 @@ int occur(const vector<int> &v, int x, bool first) {
             if(first) high = mid - 1;
             else low = mid + 1;
         }
-        else if (v[mid] < x)
+        else if (v[mid] < x) {
             low = mid + 1;
-        else
+        }
+        else {
             high = mid - 1;
+        }
     }
     return result;
 }
 
 // Counts the number of occurrences of an element in an array
 int countOccur(const vector<int> &v, int x) {
-    int firstOccur = occur(v, x, true);
-    int lastOccur = occur(v, x, false);
-    return (lastOccur - firstOccur) + 1;
+    int firstOccur = occur(v, x, 1);
+    if(firstOccur == -1) return 0;
+    else {
+        int lastOccur = occur(v, x, 0);
+        return (lastOccur - firstOccur) + 1;
+    }
 }
