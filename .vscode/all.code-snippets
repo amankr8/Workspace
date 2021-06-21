@@ -1,0 +1,6 @@
+{
+	"snippet": {
+		"prefix": "all",
+		"body": "v.begin(), v.end()"
+	}
+}

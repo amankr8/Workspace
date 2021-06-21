@@ -1,0 +1,6 @@
+{
+	"snippet": {
+		"prefix": "maxe",
+		"body": "*max_element(v.begin(), v.end())"
+	}
+}
