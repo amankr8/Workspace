@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "lb",
-		"body": "lower_bound(v.begin(), v.end(), x) - v.begin()"
+		"body": "lower_bound(v.begin(), v.end(), x) - v.begin();"
 	}
 }

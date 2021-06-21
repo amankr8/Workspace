@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "forn",
-		"body": "for(int i=0; i<n; i++)"
+		"body": "for(int i=0; i<v.size(); i++)"
 	}
 }
