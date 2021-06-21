@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Returns the prime factors of input
+// Returns the prime factors of a number
 vector<int> primeFactors(int n) {
     vector<int> pf;
     for(int i=2; i<=sqrt(n); i++) {
