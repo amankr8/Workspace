@@ -2,7 +2,7 @@
 using namespace std;
 
 // Linear Search
-int linearSearch(vector<int> v, int x) {
+int linearSearch(const vector<int> &v, int x) {
     for(int i=0; i<v.size(); i++)
         if(v[i] == x) 
             return i;

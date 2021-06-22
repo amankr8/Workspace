@@ -2,7 +2,7 @@
 using namespace std;
 
 // Returns the first or last occurrence of an element in an array
-int occur(const vector<int> &v, int x, bool first) {
+int binarySearch(const vector<int> &v, int x, bool first) {
     int result = -1;
     int low = 0, high = v.size() - 1;
     while (high >= low) {
@@ -22,12 +22,12 @@ int occur(const vector<int> &v, int x, bool first) {
     return result;
 }
 
-// Counts the number of occurrences of an element in an array
-int countOccur(const vector<int> &v, int x) {
-    int firstOccur = occur(v, x, 1);
-    if(firstOccur == -1) return 0;
+// Counts frequency of an element in an array
+int count(const vector<int> &v, int x) {
+    int first = binarySearch(v, x, 1);
+    if(first == -1) return 0;
     else {
-        int lastOccur = occur(v, x, 0);
-        return (lastOccur - firstOccur) + 1;
+        int last = binarySearch(v, x, 0);
+        return (last - first) + 1;
     }
 }

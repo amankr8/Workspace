@@ -12,7 +12,7 @@ int binarySearch(vector<int> &v, int x) {
         else if(x > v[mid]) {
             low = mid + 1;
         }
-        else if(x < v[mid]) {
+        else {
             high = mid - 1;
         }
     }
@@ -29,7 +29,7 @@ int binarySearch(vector<int> &v, int x, int low, int high) {
         else if(x > v[mid]) {
             return binarySearch(v, x, low, mid - 1);
         }
-        else if(x < v[mid]) {
+        else {
             return binarySearch(v, x, mid + 1, high);
         }
     }
