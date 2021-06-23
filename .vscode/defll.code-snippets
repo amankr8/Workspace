@@ -1,6 +1,6 @@
 {
 	"snippet": {
-		"prefix": "deflong",
+		"prefix": "defll",
 		"body": "typedef long long ll;"
 	}
 }
