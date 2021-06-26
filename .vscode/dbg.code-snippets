@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "dbg",
-		"body": "cout << \"x: \" << x << endl;" 
+		"body": "cout << \"var: \" << var << endl;" 
 	}
 }
