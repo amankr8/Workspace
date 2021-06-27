@@ -5,21 +5,21 @@ using namespace std;
 class Solution {
 public:
     ListNode* merge(ListNode* left, ListNode* right) {
-        ListNode* NewHead = new ListNode(0);
-        ListNode* ptr = NewHead;
+        ListNode* NewHead = new ListNode();
+        ListNode* head = NewHead;
         while(left && right) {
             if(left->val < right->val) {
-                ptr->next = left;
+                head->next = left;
                 left = left->next;
             }
             else {
-                ptr->next = right;
+                head->next = right;
                 right = right->next;
             }
-            ptr = ptr->next;
+            head = head->next;
         }
-        if(left) ptr->next = left;
-        else ptr->next = right;
+        if(left) head->next = left;
+        else head->next = right;
         
         return NewHead->next;
     }

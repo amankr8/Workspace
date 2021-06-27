@@ -3,6 +3,7 @@
         "*.js": "javascriptreact",
         "random": "cpp",
         "iostream": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "charconv": "cpp"
     }
 }
