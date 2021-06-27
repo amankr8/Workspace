@@ -4,6 +4,7 @@
         "random": "cpp",
         "iostream": "cpp",
         "utility": "cpp",
-        "charconv": "cpp"
+        "charconv": "cpp",
+        "xutility": "cpp"
     }
 }
