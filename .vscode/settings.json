@@ -5,6 +5,7 @@
         "iostream": "cpp",
         "utility": "cpp",
         "charconv": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "vector": "cpp"
     }
 }
