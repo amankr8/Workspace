@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "mine",
-		"body": "*min_element(v.begin(), v.end());"
+		"body": "*min_element(v.begin(), v.end())"
 	}
 }
