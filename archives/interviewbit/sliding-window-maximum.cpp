@@ -20,7 +20,7 @@ public:
         priority_queue<pair<int, int>, vector<pair<int, int>>> pq;
         for(int i=0; i<A.size(); i++) {
             pq.push({A[i], i});
-            while(pq.top().second < i - B + 1) pq.pop();
+            while(pq.top().second < (i - B + 1)) pq.pop();
             if(i >= B - 1) v.push_back(pq.top().first);
         }
         return v;
