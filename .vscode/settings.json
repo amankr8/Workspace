@@ -8,6 +8,7 @@
         "xutility": "cpp",
         "vector": "cpp",
         "ostream": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "cstdlib": "cpp"
     }
 }
