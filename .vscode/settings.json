@@ -9,6 +9,8 @@
         "vector": "cpp",
         "ostream": "cpp",
         "map": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "xtree": "cpp",
+        "xstring": "cpp"
     }
 }

@@ -2,20 +2,20 @@
 using namespace std;
 
 vector<int> howSum(int targetSum, vector<int> &v, map<int, vector<int>> &m) {
-    if(m.count(targetSum)) return m[targetSum];
-
     if(targetSum == 0) return {};
     if(targetSum < 0) return {-1};
 
+    vector<int> min;
     for(int i=0; i<v.size(); i++) {
         int rem = targetSum - v[i];
         vector<int> temp = howSum(rem, v, m);
-        if(!temp.empty() && temp[0] == -1) continue;
-        m[targetSum] = temp;
-        m[targetSum].push_back(v[i]);
-        return m[targetSum];
+        if(!temp.empty() && temp[0] == -1) continue; 
+        temp.push_back(v[i]);
+        if(min.empty() || temp.size() < min.size()) {
+            min = temp;
+        }
     }
 
-    m[targetSum] = {-1};
-    return m[targetSum];
+    if(min.empty()) return {-1};
+    return min;
 }
