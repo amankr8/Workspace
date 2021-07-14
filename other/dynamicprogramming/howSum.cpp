@@ -10,10 +10,11 @@ vector<int> howSum(int targetSum, vector<int> &v, map<int, vector<int>> &m) {
     for(int i=0; i<v.size(); i++) {
         int rem = targetSum - v[i];
         vector<int> temp = howSum(rem, v, m);
-        if(!temp.empty() && temp[0] == -1) continue;
-        m[targetSum] = temp;
-        m[targetSum].push_back(v[i]);
-        return m[targetSum];
+        if(temp.empty() || temp[0] != -1) {
+            temp.push_back(v[i]);
+            m[targetSum] = temp;
+            return m[targetSum];
+        }
     }
 
     m[targetSum] = {-1};
