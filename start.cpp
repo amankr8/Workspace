@@ -11,13 +11,16 @@ void handle_io() {
     cout.tie(NULL);
 }
 
-void solve() {
+int solve() {
+    return 0;
 }
 
 int main() {
     handle_io();
     int t;
     cin >> t;
-    while(t--) solve();
+    while(t--) {
+        cout << solve() << endl;
+    }
     return 0;
 }

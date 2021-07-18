@@ -3,7 +3,6 @@ using namespace std;
 
 vector<int> howSum(int targetSum, vector<int> &v, map<int, vector<int>> &m) {
     if(m.count(targetSum)) return m[targetSum];
-
     if(targetSum == 0) return {};
     if(targetSum < 0) return {-1};
 
