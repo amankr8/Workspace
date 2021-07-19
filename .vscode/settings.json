@@ -12,6 +12,11 @@
         "cstdlib": "cpp",
         "xtree": "cpp",
         "xstring": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "xiosbase": "cpp",
+        "algorithm": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp"
     }
 }
