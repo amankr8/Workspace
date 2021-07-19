@@ -6,21 +6,19 @@ void handle_io() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 }
 
-int solve() {
-    return 0;
+void solve() {
+    
 }
 
 int main() {
     handle_io();
     int t;
     cin >> t;
-    while(t--) {
-        cout << solve() << endl;
-    }
+    while(t--) solve();
     return 0;
 }
