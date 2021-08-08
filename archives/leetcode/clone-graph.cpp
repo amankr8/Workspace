@@ -24,6 +24,7 @@ class Solution {
 public:
     unordered_map<Node*, Node*> m;
     
+    // BFS
     Node* cloneGraph(Node* node) {
         if(!node) return NULL;
         
@@ -49,5 +50,20 @@ public:
         }
         
         return copy;
+    }
+
+    // DFS
+    Node* cloneGraph(Node* node) {
+        if(!node) return NULL;
+        
+        if(!m.count(node)) {
+            m[node] = new Node(node->val, {});
+            
+            for(auto it : node->neighbors) {
+                m[node]->neighbors.push_back(cloneGraph(it));
+            }
+        }
+        
+        return m[node];
     }
 };
