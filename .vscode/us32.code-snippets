@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "us32",
-		"body": "unordered_set<int, int>"
+		"body": "unordered_set<int>"
 	}
 }
