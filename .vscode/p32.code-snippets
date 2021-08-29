@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "p32",
-		"body": "pair<int>"
+		"body": "pair<int, int>"
 	}
 }
