@@ -35,11 +35,11 @@ int main() {
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     pq.push({0, source});
     while(!pq.empty()) {
-        int node = pq.top().second;
+        int vertex = pq.top().second;
         int weight = pq.top().first;
         pq.pop();
 
-        for(pair<int, int> p : adj[node]) {
+        for(pair<int, int> p : adj[vertex]) {
             if(weight + p.second < dist[p.first]) {
                 dist[p.first] = weight + p.second;
                 pq.push({dist[p.first], p.first});
@@ -52,6 +52,16 @@ int main() {
 
     return 0;
 }
+
+/*
+4 4 
+1 2 24
+1 4 20
+3 1 3
+4 3 12
+1
+
+*/
 
 // int main() {
 //     handle_io();
