@@ -2,12 +2,12 @@
 using namespace std;
 
 struct TrieNode {
-	struct TrieNode *child[26];
+	struct TrieNode* child[26];
 	bool isWord;
 };
 
-struct TrieNode *getNode(void) {
-	struct TrieNode *node = new TrieNode;
+struct TrieNode* getNode() {
+	struct TrieNode* node = new TrieNode;
 	node->isWord = false;
 
 	for(int i = 0; i < 26; i++) {
@@ -17,8 +17,8 @@ struct TrieNode *getNode(void) {
 	return node;
 }
 
-void insert(struct TrieNode *root, string key) {
-	struct TrieNode *it = root;
+void insert(struct TrieNode* root, string key) {
+	struct TrieNode* it = root;
 
 	for(int i=0; i<key.size(); i++) {
 		int index = key[i] - 'a';
@@ -31,8 +31,8 @@ void insert(struct TrieNode *root, string key) {
 	it->isWord = true;
 }
 
-bool search(struct TrieNode *root, string key) {
-	struct TrieNode *it = root;
+bool search(struct TrieNode* root, string key) {
+	struct TrieNode* it = root;
 
 	for(int i=0; i<key.size(); i++) {
 		int index = key[i] - 'a';
@@ -45,6 +45,10 @@ bool search(struct TrieNode *root, string key) {
 }
 
 int main() {
+    struct TrieNode* root = getNode();
 	
+    insert(root, "a");
+    search(root, "a") ? cout << "Found!" << endl : cout << "Not found!" << endl;
+
 	return 0;
 }
