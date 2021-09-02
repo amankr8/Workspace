@@ -1,8 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> djikstra(int vertices, int source, vector<vector<pair<int,int>>>& adj) {
-    vector<int> dist(vertices + 1, INT_MAX);
+// Djikstra's Algorithm 
+// ~ shortest path from single source
+// ~ works only for positive weighted edges
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    vector<vector<pair<int, int>>> adj(n+1);
+    for(int i=0; i<n; i++) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
+    }
+
+    int source;
+    cin >> source;
+
+    vector<int> dist(n+1, INT_MAX);
     dist[source] = 0;
 
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
@@ -20,8 +38,10 @@ vector<int> djikstra(int vertices, int source, vector<vector<pair<int,int>>>& ad
         }
     }
 
-    dist.erase(dist.begin());
-    return dist;
+    for(int i=1; i<dist.size(); i++) cout << dist[i] << " ";
+    cout << endl;
+
+    return 0;
 }
 
 /*

@@ -9,7 +9,6 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-// 148. Sort List
 class Solution {
 public:
     ListNode* merge(ListNode* left, ListNode* right) {

@@ -9,7 +9,6 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-// 92. Reverse Linked List II
 class Solution {
 public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {

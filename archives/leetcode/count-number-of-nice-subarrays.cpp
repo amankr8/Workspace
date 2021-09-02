@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 1248. Count Number of Nice Subarrays
 class Solution {
     public:
         int numberOfSubarrays(vector<int> &nums, int k) {
