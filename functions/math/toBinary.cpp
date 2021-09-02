@@ -5,7 +5,7 @@ using namespace std;
 int toBinary(int x) {
     int a = 1, bin = 0;
     while(x > 0) {
-        bin += (x%2)*a;
+        bin += (x % 2) * a;
         x /= 2;
         a *= 10;
     }

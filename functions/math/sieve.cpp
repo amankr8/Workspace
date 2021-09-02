@@ -5,6 +5,7 @@ using namespace std;
 vector<int> sieve(int N) {
     vector<int> v(N+1, 1), p;
     if(N < 2) return p;
+
     v[0] = v[1] = 0;
     p.push_back(2);
     for(int i=3; i<=N; i+=2) {
