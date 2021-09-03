@@ -26,7 +26,7 @@ public:
     void insert(string word) {
         TrieNode* it = root;
 
-        for(auto ch : word) {
+        for(char ch : word) {
             if(!it->next[ch - 'a']) {
                 it->next[ch - 'a'] = new TrieNode();
             }
@@ -39,7 +39,7 @@ public:
     bool search(string word) {
         TrieNode* it = root;
 
-        for(auto ch : word) {
+        for(char ch : word) {
             if(!it->next[ch - 'a']) {
                 return false;
             }
@@ -47,18 +47,5 @@ public:
         }
 
         return it->isWord;
-    }
-
-    void remove(string word) {
-        TrieNode* it = root;
-
-        for(auto ch : word) {
-            if(!it->next[ch - 'a']) {
-                return;
-            }
-            it = it->next[ch - 'a'];
-        }
-
-        it->isWord = false;
     }
 };
