@@ -25,7 +25,7 @@ void print_bfs(int root, vector<bool> visited, vector<vector<int>>& adj) {
     while(!q.empty()) {
         int curr = q.front();
         q.pop();
-        cout << (char)(curr + 'a') << " ";
+        cout << curr << " ";
         for(int neighbor : adj[curr]) {
             if(visited[neighbor]) continue;
             visited[neighbor] = true;
