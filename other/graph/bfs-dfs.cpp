@@ -10,9 +10,10 @@ void print_dfs(int root, vector<bool> visited, vector<vector<int>>& adj) {
         st.pop();
         cout << (char)(curr + 'a') << " ";
         for(int neighbor : adj[curr]) {
-            if(visited[neighbor]) continue;
-            visited[neighbor] = true;
-            st.push(neighbor);
+            if(!visited[neighbor]) {
+                visited[neighbor] = true;
+                st.push(neighbor);
+            }
         }
     }
     cout << endl;
@@ -27,9 +28,10 @@ void print_bfs(int root, vector<bool> visited, vector<vector<int>>& adj) {
         q.pop();
         cout << curr << " ";
         for(int neighbor : adj[curr]) {
-            if(visited[neighbor]) continue;
-            visited[neighbor] = true;
-            q.push(neighbor);
+            if(!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.push(neighbor);
+            }
         }
     }
     cout << endl;
@@ -50,4 +52,6 @@ int main() {
 
     print_dfs(0, visited, adj);
     print_bfs(0, visited, adj);
+
+    return 0;
 }
