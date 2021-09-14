@@ -3,7 +3,7 @@
 		"prefix": "getn",
 		"body": [
             "int n;",
-            "cin >> n;", 
+            "cin >> n;"
         ]
 	}
 }

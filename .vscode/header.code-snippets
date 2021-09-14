@@ -1,0 +1,9 @@
+{
+	"snippet": {
+		"prefix": "header",
+		"body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;"
+        ]
+	}
+}
