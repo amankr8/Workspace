@@ -5,22 +5,8 @@ using namespace std;
 // ~ shortest path from single source
 // ~ works only for positive weighted edges
 
-int main() {
-    int n, m;
-    cin >> n >> m;
-
-    vector<vector<pair<int, int>>> adj(n+1);
-    for(int i=0; i<n; i++) {
-        int u, v, w;
-        cin >> u >> v >> w;
-        adj[u].push_back({v, w});
-        adj[v].push_back({u, w});
-    }
-
-    int source;
-    cin >> source;
-
-    vector<int> dist(n+1, INT_MAX);
+vector<int> djikstra(int source, vector<vector<pair<int,int>>>& adj) {
+    vector<int> dist(adj.size(), INT_MAX);
     dist[source] = 0;
 
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
@@ -37,8 +23,27 @@ int main() {
             }
         }
     }
+    return dist;
+}
 
-    for(int i=1; i<dist.size(); i++) cout << dist[i] << " ";
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    vector<vector<pair<int, int>>> adj(n+1);
+    for(int i=0; i<n; i++) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
+    }
+
+    int source;
+    cin >> source;
+
+    vector<int> ans = djikstra(source, adj);
+
+    for(int i=1; i<ans.size(); i++) cout << ans[i] << " ";
     cout << endl;
 
     return 0;
