@@ -66,6 +66,8 @@ int main() {
     fast_cin();
     ll t;
     cin >> t;
-    while(t--) solve();
+    while(t--) {
+        solve();
+    }
     return 0;
 }

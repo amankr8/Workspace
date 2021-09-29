@@ -1,6 +1,6 @@
 {
 	"snippet": {
 		"prefix": "rsort",
-		"body": "sort(v.begin(), v.end(), greater<int>());"
+		"body": "sort(v.rbegin(), v.rend());"
 	}
 }
