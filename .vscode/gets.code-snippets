@@ -1,0 +1,9 @@
+{
+	"snippet": {
+		"prefix": "gets",
+		"body": [
+            "string s;",
+            "cin >> s;"
+        ]
+	}
+}
